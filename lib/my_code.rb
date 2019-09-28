@@ -17,7 +17,7 @@ def reduce(source_array, starting_point = nil)
     total = yield(total, source_array[i])
     i += 1
   end
-  total + starting_point
+  total += starting_point
 end
 
 reduce(source_array){|memo, n| memo || n}
