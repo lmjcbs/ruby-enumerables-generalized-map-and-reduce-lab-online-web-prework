@@ -9,6 +9,8 @@ def map(source_array)
   new_array
 end
 
+source_array = [ false, nil, nil, nil, true]
+
 def reduce(source_array, starting_point = 0)
   i = 0
   total = starting_point
@@ -18,3 +20,5 @@ def reduce(source_array, starting_point = 0)
   end
   total
 end
+
+reduce(source_array){|memo, n| memo || n}
